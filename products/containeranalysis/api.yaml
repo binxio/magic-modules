@@ -33,6 +33,10 @@ objects:
     description: |
       A Container Analysis note is a high-level piece of metadata that
       describes a type of analysis that can be done for a resource.
+    iam_policy: !ruby/object:Api::Resource::IamPolicy
+      parent_resource_attribute: 'note'
+      method_name_separator: ':'
+      exclude: false
     references: !ruby/object:Api::Resource::ReferenceLinks
       guides:
         'Official Documentation': 'https://cloud.google.com/container-analysis/'
