@@ -24,11 +24,13 @@ overrides: !ruby/object:Overrides::ResourceOverrides
       - !ruby/object:Provider::Terraform::Examples
         name: "container_analysis_note_basic"
         primary_resource_id: "note"
+        primary_resource_name: "fmt.Sprintf(\"tf-test-test-note-%s\", context[\"random_suffix\"])"
         vars:
           note_name: "attestor-note"
       - !ruby/object:Provider::Terraform::Examples
         name: "container_analysis_note_attestation_full"
         primary_resource_id: "note"
+        primary_resource_name: "fmt.Sprintf(\"tf-test-test-note-%s\", context[\"random_suffix\"])"
         vars:
           note_name: "attestor-note"
     properties:
